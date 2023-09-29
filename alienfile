@@ -18,7 +18,7 @@ share {
     };
 
     if ($^O eq 'MSWin32') {
-        start_url 'file://C:/perls/GtkStack_from_mingw.zip';  #  needs changing
+        start_url 'https://github.com/shawnlaffan/perl-alien-gtkstack-windows/releases/download/first_upload/GtkStack_from_mingw.zip';  #  needs changing
         plugin 'Download';
         plugin 'Extract' => 'zip';
         plugin 'Build::Copy';
