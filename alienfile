@@ -1,0 +1,27 @@
+use 5.010;
+use strict;
+use warnings;
+use alienfile;
+use Config;
+
+#  effectively a no-op unless on the right system
+probe sub {
+    my($build) = @_;
+
+    return $^O eq 'MSWin32' && $Config{ccflags} =~ /MINGW/ ? 'share' : 'system';
+};
+
+share {
+
+    configure {
+      requires 'Alien::Build::Plugin::Build::Copy';
+    };
+
+    if ($^O eq 'MSWin32') {
+        start_url 'file://C:/perls/GtkStack_from_mingw.zip';  #  needs changing
+        plugin 'Download';
+        plugin 'Extract' => 'zip';
+        plugin 'Build::Copy';
+    }
+
+};
