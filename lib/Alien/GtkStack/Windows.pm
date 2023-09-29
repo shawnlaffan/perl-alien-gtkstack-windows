@@ -52,7 +52,7 @@ One day it might also include the directories needed for compilation.
 
 The actual Gtk2 and related packages are not provided here.
 
-The set of files is derived from this perlmonks thread: L<>https://www.perlmonks.org/?node_id=11153992>
+The set of files is derived from this perlmonks thread: L<https://www.perlmonks.org/?node_id=11153992>
 
 DLLs are from MSYS2.
 
