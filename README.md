@@ -4,6 +4,7 @@ Perl Alien package to provide dynamic libs for Gtk on Windows
 Use it before you call any Gtk2 related perl libs and it will be added to the path
 if you are using Strawberry Perl.  If you are not on Windows then it does nothing.  
 (It should probably be generalised to work for any Windows perl compiled with gcc).
+(There are PPMs available to install Gtk2 etc - see below).
 
 ```perl5
 use strict;
