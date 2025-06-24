@@ -7,7 +7,7 @@ use Config;
 use Path::Tiny qw /path/;
 use List::MoreUtils qw /lastidx/;
 
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 
 #  A bit underhanded.  Should be generalised to any mingw64 perl on Windows.
@@ -24,6 +24,10 @@ if (($Config{myuname} // '') =~ /strawberry/i) {
     else {
         push @PATH, $bin_dir;
     }
+
+    use Env qw/@GI_TYPELIB_PATH @XDG_DATA_DIRS/;
+    push @GI_TYPELIB_PATH, path(__PACKAGE__->dist_dir, 'lib', 'girepository-1.0');
+    push @XDG_DATA_DIRS, path(__PACKAGE__->dist_dir, 'share');
 }
 
 
