@@ -29,3 +29,5 @@ Alien-gdal-*.tar.gz
 
 /.idea
 /*.iml
+/build/
+/_build/
