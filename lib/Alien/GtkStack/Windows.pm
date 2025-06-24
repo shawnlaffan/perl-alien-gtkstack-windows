@@ -7,7 +7,7 @@ use Config;
 use Path::Tiny qw /path/;
 use List::MoreUtils qw /lastidx/;
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 
 #  A bit underhanded.  Should be generalised to any mingw64 perl on Windows.
