@@ -1,7 +1,7 @@
 # Alien-GtkStack-Windows
 Perl Alien package to provide dynamic libs for Gtk on Windows 
 
-Use it before you call any Gtk2 related perl libs and it will be added to the path
+Use it before you call any Gtk related perl libs and it will be added to the path
 if you are using Strawberry Perl.  If you are not on Windows then it does nothing.
 Gtk2 etc can be installed using PPMs - see below.
 
@@ -9,19 +9,19 @@ Gtk2 etc can be installed using PPMs - see below.
 use strict;
 use warnings;
 use Alien::GtkStack::Windows;
-use Gtk2;
+use Gtk3;
 ```
 
 or:
 ```
-perl -MAlien::GtkStack::Windows -E"use Gtk2"
+perl -MAlien::GtkStack::Windows -E"use Gtk3"
 ```
 
 or:
 
 ```cmd
 set PERL5OPT=-MAlien::GtkStack::Windows
-perl -E "use Gtk2"
+perl -E "use Gtk3"
 ```
 
 
@@ -29,7 +29,7 @@ Acknowledgements: sisyphus for working out the build process
 
 The set of provided files is derived from this perlmonks thread: https://www.perlmonks.org/?node_id=11153992
 
-The libs and DLLs are from MSYS2 except libgnomecanvas2.dll which is locally patched before compilation.
+The libs and DLLs are from MSYS2 except libgnomecanvas2.dll which is locally patched before compilation (and is not provided with the Gtk3 stack).
 
 There are also PPM files available for Strawberry Perl 5.38 so you could install the stack using:  
 
