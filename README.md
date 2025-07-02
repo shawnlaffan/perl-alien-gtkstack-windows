@@ -35,11 +35,11 @@ There are also PPM files available for Strawberry Perl 5.38 so you could install
 
 ```cmd
 cpanm https://github.com/shawnlaffan/perl-alien-gtkstack-windows.git
-ppm set repository biodiverse https://github.com/shawnlaffan/perl-alien-gtkstack-windows/releases/download/first_upload/
+ppm set repository biodiverse https://github.com/shawnlaffan/perl-alien-gtkstack-windows/releases/download/Gtk3_20250624/
 ppm install Cairo
 ppm install Cairo-GObject
 ppm install Glib
-ppm install Gnome2-Canvas
-ppm install Gtk2
+ppm install Glib-Object-Introspection
+ppm install Gtk3
 ppm install Pango
 ```
